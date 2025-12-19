@@ -22,3 +22,7 @@ apam-mobile/dist/
 apam-mobile/ios/
 apam-mobile/android/
 apam-mobile/.env
+
+# Other
+documentation/
+"sreen design/"
