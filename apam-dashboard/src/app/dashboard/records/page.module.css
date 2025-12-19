@@ -1,0 +1,485 @@
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.tabs {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.tab {
+    padding: 0.75rem 0.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    position: relative;
+    border-bottom: 2px solid transparent;
+}
+
+.activeTab {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+/* Editing Layout */
+.editingContainer {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.editingSidebar {
+    background: var(--background);
+    border-right: 1px solid var(--border);
+    padding: 1.5rem 0.5rem;
+}
+
+.subTab {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-weight: 600;
+    transition: all 0.2s;
+    margin-bottom: 0.5rem;
+}
+
+.activeSubTab {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.editingContent {
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.formGrid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+/* Exam Cards */
+.examList {
+    display: grid;
+    gap: 1rem;
+}
+
+.examCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+}
+
+.recordsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.recordCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+}
+
+.recordCard:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.fileType {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.patientName {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.actionBtn {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Access Section */
+.accessSection {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.emptyState {
+    padding: 4rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Modal and Search Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: var(--surface);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid var(--border);
+    animation: fadeIn 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modalHeader {
+    padding: 1.5rem;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalHeader h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.closeBtn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.modalBody {
+    padding: 1.5rem;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1rem;
+    outline: none;
+}
+
+.searchInput:focus {
+    border-color: var(--primary);
+}
+
+.searchResults {
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.resultItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s;
+}
+
+.resultItem:last-child {
+    border-bottom: none;
+}
+
+.resultItem:hover {
+    background: var(--background);
+}
+
+.resultAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.resultInfo {
+    flex: 1;
+}
+
+.resultName {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.resultEmail {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.requestForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.selectedPatientBox {
+    background: var(--background);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary-light);
+    position: relative;
+}
+
+.changeBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-height: 100px;
+    font-size: 0.95rem;
+    resize: vertical;
+}
+
+.patientSelector {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--primary-light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.selectInput {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary);
+    background: white;
+    font-weight: 600;
+    font-size: 1rem;
+    outline: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Booklet Aesthetic */
+.bookletContainer {
+    background: #fffcf5;
+    /* Slightly yellowish paper color */
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 3rem 4rem;
+    position: relative;
+    min-height: 600px;
+    border-radius: 4px;
+    background-image: linear-gradient(#e1e1e1 1px, transparent 1px);
+    background-size: 100% 2.5rem;
+    /* Simulates ruled lines */
+    line-height: 2.5rem;
+    overflow: hidden;
+}
+
+.bookletContainer::before {
+    content: '';
+    position: absolute;
+    left: 4.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ffcccc;
+    /* Red vertical margin line */
+}
+
+.bookletHeader {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    border-bottom: 2px double var(--primary);
+    padding-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.bookletTitle {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.2rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.bookletContent {
+    position: relative;
+    z-index: 1;
+    padding-left: 2rem;
+}
+
+.bookletSection {
+    margin-bottom: 2.5rem;
+}
+
+.bookletLabel {
+    font-weight: 800;
+    font-family: 'Courier New', monospace;
+    color: #555;
+    margin-right: 1.5rem;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.bookletValue {
+    font-family: 'Brush Script MT', 'Dancing Script', cursive;
+    /* Script font for "handwritten" look */
+    color: #003366;
+    /* Blue ink color */
+    font-size: 1.4rem;
+    border-bottom: 1px dashed #aaa;
+    min-width: 200px;
+    display: inline-block;
+}
+
+.bookletGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.bookletStamp {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    border: 3px solid #cc0000;
+    color: #cc0000;
+    padding: 0.5rem 1rem;
+    font-weight: 900;
+    transform: rotate(-15deg);
+    opacity: 0.6;
+    border-radius: 8px;
+    font-family: 'Arial Black', sans-serif;
+}

@@ -1,0 +1,26 @@
+# Commandes d'installation Mobile AP.A.M
+
+## 1. Initialiser le projet
+cd /home/gerazayis/Documents/projet_APAM
+npx create-expo-app@latest mobile-apam --template blank-typescript
+
+## 2. Entrer dans le dossier
+cd mobile-apam
+
+## 3. Installer toutes les dépendances en une commande
+npm install @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs react-native-paper react-native-vector-icons @reduxjs/toolkit react-redux axios react-hook-form @hookform/resolvers yup lucide-react-native @react-native-async-storage/async-storage
+
+## 4. Installer les packages Expo
+npx expo install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated expo-constants expo-status-bar expo-image-picker expo-document-picker
+
+## 5. Démarrer le serveur
+npx expo start
+
+## Raccourci - Tout en une fois
+cd /home/gerazayis/Documents/projet_APAM && \
+npx create-expo-app@latest mobile-apam --template blank-typescript && \
+cd mobile-apam && \
+npm install @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs react-native-paper react-native-vector-icons @reduxjs/toolkit react-redux axios react-hook-form @hookform/resolvers yup lucide-react-native @react-native-async-storage/async-storage && \
+npx expo install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated expo-constants expo-status-bar expo-image-picker expo-document-picker && \
+npx expo start
+

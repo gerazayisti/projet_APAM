@@ -1,0 +1,24 @@
+# Global / Root Ignore
+.DS_Store
+Thumbs.db
+*.log
+
+# Backend
+backends/venv/
+backends/__pycache__/
+backends/.env
+backends/*.db
+
+# Dashboard
+apam-dashboard/node_modules/
+apam-dashboard/.next/
+apam-dashboard/dist/
+apam-dashboard/.env.local
+
+# Mobile
+apam-mobile/node_modules/
+apam-mobile/.expo/
+apam-mobile/dist/
+apam-mobile/ios/
+apam-mobile/android/
+apam-mobile/.env
